@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import {
   Text,
+  ScrollView,
   View,
   Image,
   ImageBackground,
   TouchableOpacity,
-  Button,
 } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import {
@@ -79,7 +79,9 @@ const CarItem = () => {
         </View>
 
         {/* Menu */}
-        <Menu />
+        <ScrollView>
+          <Menu />
+        </ScrollView>
       </View>
     </>
   );

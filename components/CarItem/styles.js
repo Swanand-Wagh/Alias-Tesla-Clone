@@ -4,16 +4,15 @@ const styles = StyleSheet.create({
   carContainer: {
     width: "100%",
     height: "100%",
-    backgroundColor: "orange",
   },
   header: {
     marginTop: 50,
-    marginLeft: 25,
-    marginRight: 25,
-    marginBottom: 10,
+    marginLeft: 20,
+    marginRight: 20,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    marginBottom: 10,
   },
   headerTitle: {
     color: "white",
@@ -39,6 +38,7 @@ const styles = StyleSheet.create({
   batteryImg: {
     height: 26,
     width: 70,
+    marginRight: 12,
   },
   batteryText: {
     color: "white",
@@ -54,17 +54,17 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   controls: {
-    width: "90%",
     flexDirection: "row",
-    justifyContent: "space-evenly",
-    marginTop: 155,
-    marginLeft: 20,
+    justifyContent: "center",
+    marginTop: 175,
+    marginBottom: 10,
   },
   controlsBtn: {
     borderWidth: 1,
     borderColor: "white",
     borderRadius: 50,
     padding: 18,
+    marginLeft: 25,
   },
 });
 
