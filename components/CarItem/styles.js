@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
   },
   header: {
     marginTop: 50,
-    marginLeft: 20,
-    marginRight: 20,
+    marginLeft: 25,
+    marginRight: 25,
     marginBottom: 10,
     flexDirection: "row",
     justifyContent: "space-between",
@@ -52,6 +52,19 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: "white",
     fontWeight: "bold",
+  },
+  controls: {
+    width: "90%",
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    marginTop: 155,
+    marginLeft: 20,
+  },
+  controlsBtn: {
+    borderWidth: 1,
+    borderColor: "white",
+    borderRadius: 50,
+    padding: 18,
   },
 });
 

@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Text,
   View,
   Image,
   ImageBackground,
   TouchableOpacity,
+  Button,
 } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faCog, faToolbox } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCog,
+  faToolbox,
+  faFan,
+  faKey,
+  faLock,
+  faUnlockAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import styles from "./styles";
+import Menu from "../Menu/Menu";
 
 const CarItem = () => {
+  const [isLocked, setIsLocked] = useState(true);
+
   return (
     <>
       <View style={styles.carContainer}>
@@ -24,7 +35,7 @@ const CarItem = () => {
           <TouchableOpacity>
             <FontAwesomeIcon style={styles.icon} icon={faCog} size={24} />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>Hey Hey</Text>
+          <Text style={styles.headerTitle}>BatMobile</Text>
           <TouchableOpacity>
             <FontAwesomeIcon style={styles.icon} icon={faToolbox} size={24} />
           </TouchableOpacity>
@@ -43,6 +54,32 @@ const CarItem = () => {
         <View style={styles.status}>
           <Text style={styles.statusText}>Parked </Text>
         </View>
+
+        {/* Control Icons */}
+        <View style={styles.controls}>
+          <TouchableOpacity>
+            <View style={styles.controlsBtn}>
+              <FontAwesomeIcon style={styles.icon} icon={faFan} size={24} />
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.controlsBtn}>
+              <FontAwesomeIcon style={styles.icon} icon={faKey} size={24} />
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => setIsLocked(!isLocked)}>
+            <View style={styles.controlsBtn}>
+              <FontAwesomeIcon
+                style={styles.icon}
+                icon={isLocked ? faLock : faUnlockAlt}
+                size={24}
+              />
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        {/* Menu */}
+        <Menu />
       </View>
     </>
   );
